@@ -27,7 +27,6 @@ This document provides an overview and documentation for the FastAPI Task API. T
 
 ```json
 {
-  "_id": "Generated MongoDB ObjectId",
   "id": 1,
   "name": "Task Name",
   "assignee": "Assignee Name",
@@ -48,7 +47,6 @@ This document provides an overview and documentation for the FastAPI Task API. T
 ```json
 [
   {
-    "_id": "Generated MongoDB ObjectId",
     "id": 1,
     "name": "Task Name 1",
     "assignee": "Assignee Name 1",
@@ -57,7 +55,6 @@ This document provides an overview and documentation for the FastAPI Task API. T
     "ChethanLReddyProperty": "Randomly Generated String"
   },
   {
-    "_id": "Generated MongoDB ObjectId",
     "id": 2,
     "name": "Task Name 2",
     "assignee": "Assignee Name 2",
@@ -83,7 +80,6 @@ This document provides an overview and documentation for the FastAPI Task API. T
 
 ```json
 {
-  "_id": "Generated MongoDB ObjectId",
   "id": 1,
   "name": "Task Name",
   "assignee": "Assignee Name",
@@ -119,7 +115,6 @@ This document provides an overview and documentation for the FastAPI Task API. T
 
 ```json
 {
-  "_id": "Generated MongoDB ObjectId",
   "id": 1,
   "name": "Updated Task Name",
   "assignee": "Updated Assignee Name",
