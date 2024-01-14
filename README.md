@@ -1,4 +1,4 @@
-# FastAPI Task API Documentation
+# Task API Documentation
 
 This document provides an overview and documentation for the FastAPI Task API. The API allows you to perform CRUD operations on tasks stored in a MongoDB database.
 
@@ -171,3 +171,26 @@ This document provides an overview and documentation for the FastAPI Task API. T
 ```
 
 The `createTask` and `updateTask` schemas define the structure of the request and response bodies for creating and updating tasks, respectively. The `ChethanLReddyProperty` field in the `createTask` schema is optional and is populated with a randomly generated string if not provided.
+
+## Usage
+
+1. **Create Task:**
+
+   - Send a `POST` request to `/task/create-task` with the task details in the request body.
+
+2. **Get All Tasks:**
+
+   - Send a `GET` request to `/task/task` to retrieve a list of all tasks.
+
+3. **Get Task by ID:**
+
+   - Send a `GET` request to `/task/task/{id}` to retrieve a specific task by its ID.
+
+4. **Update Task:**
+
+   - Send a `PUT` request to `/task/updatetask/{id}` with the updated task details in the request body.
+
+5. **Delete Task:**
+   - Send a `DELETE` request to `/task/deletetask/{id}` to delete a specific task by its ID.
+
+**Note:** Replace `{id}` in the endpoints with the actual task ID.
