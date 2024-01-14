@@ -14,10 +14,12 @@ This document provides an overview and documentation for the FastAPI Task API. T
 
 ```json
 {
+  "id": 1,
   "name": "Task Name",
   "assignee": "Assignee Name",
   "project": "Project Name",
-  "start_time": "YYYY-MM-DDTHH:MM:SS"
+  "start_time": "YYYY-MM-DDTHH:MM:SS",
+  "ChethanLReddyProperty": "Randomly Generated String"
 }
 ```
 
@@ -26,10 +28,12 @@ This document provides an overview and documentation for the FastAPI Task API. T
 ```json
 {
   "_id": "Generated MongoDB ObjectId",
+  "id": 1,
   "name": "Task Name",
   "assignee": "Assignee Name",
   "project": "Project Name",
-  "start_time": "YYYY-MM-DDTHH:MM:SS"
+  "start_time": "YYYY-MM-DDTHH:MM:SS",
+  "ChethanLReddyProperty": "Randomly Generated String"
 }
 ```
 
@@ -45,17 +49,21 @@ This document provides an overview and documentation for the FastAPI Task API. T
 [
   {
     "_id": "Generated MongoDB ObjectId",
+    "id": 1,
     "name": "Task Name 1",
     "assignee": "Assignee Name 1",
     "project": "Project Name 1",
-    "start_time": "YYYY-MM-DDTHH:MM:SS"
+    "start_time": "YYYY-MM-DDTHH:MM:SS",
+    "ChethanLReddyProperty": "Randomly Generated String"
   },
   {
     "_id": "Generated MongoDB ObjectId",
+    "id": 2,
     "name": "Task Name 2",
     "assignee": "Assignee Name 2",
     "project": "Project Name 2",
-    "start_time": "YYYY-MM-DDTHH:MM:SS"
+    "start_time": "YYYY-MM-DDTHH:MM:SS",
+    "ChethanLReddyProperty": "Randomly Generated String"
   },
   ...
 ]
@@ -76,10 +84,12 @@ This document provides an overview and documentation for the FastAPI Task API. T
 ```json
 {
   "_id": "Generated MongoDB ObjectId",
+  "id": 1,
   "name": "Task Name",
   "assignee": "Assignee Name",
   "project": "Project Name",
-  "start_time": "YYYY-MM-DDTHH:MM:SS"
+  "start_time": "YYYY-MM-DDTHH:MM:SS",
+  "ChethanLReddyProperty": "Randomly Generated String"
 }
 ```
 
@@ -110,10 +120,12 @@ This document provides an overview and documentation for the FastAPI Task API. T
 ```json
 {
   "_id": "Generated MongoDB ObjectId",
+  "id": 1,
   "name": "Updated Task Name",
   "assignee": "Updated Assignee Name",
   "project": "Updated Project Name",
-  "start_time": "YYYY-MM-DDTHH:MM:SS"
+  "start_time": "YYYY-MM-DDTHH:MM:SS",
+  "ChethanLReddyProperty": "Randomly Generated String"
 }
 ```
 
@@ -131,27 +143,31 @@ This document provides an overview and documentation for the FastAPI Task API. T
 
 - Status Code: `204 No Content`
 
-## Usage
+## Task Schema
 
-1. **Create Task:**
+### createTask
 
-   - Send a `POST` request to `/task/create-task` with the task details in the request body.
+```json
+{
+  "id": 1,
+  "name": "Task Name",
+  "assignee": "Assignee Name",
+  "project": "Project Name",
+  "start_time": "YYYY-MM-DDTHH:MM:SS",
+  "ChethanLReddyProperty": "Randomly Generated String (Optional)"
+}
+```
 
-2. **Get All Tasks:**
+### updateTask
 
-   - Send a `GET` request to `/task/task` to retrieve a list of all tasks.
+```json
+{
+  "id": 1,
+  "name": "Updated Task Name",
+  "assignee": "Updated Assignee Name",
+  "project": "Updated Project Name",
+  "start_time": "YYYY-MM-DDTHH:MM:SS"
+}
+```
 
-3. **Get Task by ID:**
-
-   - Send a `GET` request to `/task/task/{id}` to retrieve a specific task by its ID.
-
-4. **Update Task:**
-
-   - Send a `PUT` request to `/task/updatetask/{id}` with the updated task details in the request body.
-
-5. **Delete Task:**
-   - Send a `DELETE` request to `/task/deletetask/{id}` to delete a specific task by its ID.
-
-**Note:** Replace `{id}` in the endpoints with the actual task ID.
-
-Feel free to explore and interact with the FastAPI Task API for task management.
+The `createTask` and `updateTask` schemas define the structure of the request and response bodies for creating and updating tasks, respectively. The `ChethanLReddyProperty` field in the `createTask` schema is optional and is populated with a randomly generated string if not provided.
